@@ -1,3 +1,4 @@
+package Graph;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -25,8 +26,9 @@ public class Actions extends JFrame {
 		
 		Object parent = graph.getDefaultParent();
 		graph.getModel().beginUpdate();
-		graph.insertVertex(parent, null, "TEST", 30, 80, 100, 50);
-		
+		Object g = graph.insertVertex(parent, null, "TEST", 30, 80, 100, 50);
+		graph.insertVertex(g, null, "TEST2", 40, 80, 100, 50);
+		 
 		
 		graph.getModel().endUpdate();
 	}
