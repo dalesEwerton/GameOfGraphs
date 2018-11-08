@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class CharsLoadder {
 	
-	private Character chrs[] = new Character[209];
+	private Player chrs[] = new Player[209];
 	private int indexControl = 0;
 	
 
@@ -42,7 +42,7 @@ public class CharsLoadder {
         }
 	}
 	
-	public Character[] getChars() {
+	public Player[] getChars() {
 		return this.chrs;
 	}
 	
@@ -58,7 +58,7 @@ public class CharsLoadder {
 		String spouses = itens[6];
 		String spousesIds = itens[7];
 		
-		Character ch = new Character(id, name, fatherName, fatherId, motherName, motherId, spouses, spousesIds);
+		Player ch = new Player(id, name, fatherName, fatherId, motherName, motherId, spouses, spousesIds);
 		this.chrs[this.indexControl] = ch;
 		this.indexControl++;
 	}
