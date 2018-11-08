@@ -7,13 +7,11 @@ import java.nio.file.Paths;
 
 public class CharsLoadder {
 	
-	private Character chars[];
+	private Character chrs[] = new Character[209];
+	private int indexControl = 0;
 	
-	public static void main(String[] args) {
-		loadChars();
-	}
 
-	public static void loadChars() {
+	public void loadChars() {
 		
 		String SUB_PATH = "/data/";
 		String ROOT_PATH = Paths.get("").toAbsolutePath().toString();
@@ -25,16 +23,10 @@ public class CharsLoadder {
         String cvsSplitBy = ",";
 
         try {
-
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
-
-                // use comma as separator
-                String[] item = line.split(cvsSplitBy);
-               
-                // TODO: Instanciate the chars when the data was with N/As 
+            	this.loadChar(line);
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -48,5 +40,26 @@ public class CharsLoadder {
                 }
             }
         }
+	}
+	
+	public Character[] getChars() {
+		return this.chrs;
+	}
+	
+	private void loadChar(String line) {
+		String[] itens = line.split(",");
+		
+		String id =  itens[0];
+		String name = itens[1];
+		String fatherName = itens[2];
+		String fatherId = itens[3];
+		String motherName = itens[4];
+		String motherId = itens[5];
+		String spouses = itens[6];
+		String spousesIds = itens[7];
+		
+		Character ch = new Character(id, name, fatherName, fatherId, motherName, motherId, spouses, spousesIds);
+		this.chrs[this.indexControl] = ch;
+		this.indexControl++;
 	}
 }

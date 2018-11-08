@@ -1,4 +1,8 @@
 package Graph;
+
+import Characters.CharsLoadder;
+import Characters.Character;
+
 public class Main {
 	
 	public Main() {
@@ -7,7 +11,14 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		new Main();
+		//new Main();
+		CharsLoadder chrs = new CharsLoadder();
+		chrs.loadChars();
+		Character cs[] = chrs.getChars();
+		
+		for (Character c : cs) {
+			System.out.println(c.toString());
+		}
 	}
 
 }
