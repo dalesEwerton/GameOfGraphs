@@ -27,6 +27,7 @@ public class Actions extends JFrame {
 		graph.getModel().beginUpdate();
 		graph.insertVertex(parent, null, "TEST", 30, 80, 100, 50);
 		
+		
 		graph.getModel().endUpdate();
 	}
 

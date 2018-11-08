@@ -1,0 +1,142 @@
+Id,Name,Father_Name,Father_Id,Mother_Name,Mother_Id,Spouses_Names,Spouses_Ids
+2,Lysara Karstark,,,,,Artos Stark,
+3,Lorra Royce,,,,,Beron Stark ,
+4,Alys Karstark,Rickard Karstark,,,,Sigorn,
+5,Marna Locke,,,,,Edwyle Stark,
+6,Arya Flint,,,,,Rodrik Stark,
+7,Myriame Manderly,,,,,Rodwell Stark,
+8,Hizdahr zo Loraq,,,,,,
+9,Cerissa Brax,,,,,Damon Lannister,110
+10,Alysanne Farman,,,,,Gerold,
+11,Roose Bolton,,,,,"""Fat"" Walda Frey",
+12,Ramsay Bolton,Roose Bolton,11,,,Sansa Stark,
+13,Catelyn Stark,Hoster Tully,14,Minisa Whent,21,Eddard Stark,
+14,Hoster Tully,,,,,Minisa Whent,21
+15,Edmure Tully,Hoster Tully,14,Minisa Whent,21,Roslin Frey,51
+16,Lysa Arryn,Hoster Tully,14,Minisa Whent,21,Jon Arryn,68
+17,Jeyne Royce,,,,,Jon Arryn,68
+18,Lya Serry,,,,,Theodore Tyrell,97
+19,Perra Royce,,,,,Walder Frey,46
+20,Myranda Lefford,,,,,Stafford Lannister,124
+21,Minisa Whent,,,,,Hoster Tully,14
+22,Olenna Redwyne,Runceford,,,,Luthor Tyrell,94
+23,Horas Redwyne,Paxter Redwyne,24,Mina Tyrell,104,,
+24,Paxter Redwyne,,,,, Mina Tyrell,104
+25,Hobber Redwyne,Paxter Redwyne,24,Mina Tyrell,104,,
+26,Erik Ironmaker,,,,,,
+28,Ormund Baratheon,,,,,Rhaelle Targaryen,
+29,Steffon Baratheon,Ormund Baratheon,28,Rhaelle Targaryen,,Cassana Baratheon,30
+30,Cassana Baratheon,,,,,Steffon Baratheon,29
+31,Stannis Baratheon,Steffon Baratheon,29,Cassana Baratheon,30,Selyse Florent,32
+32,Selyse Florent,,,,,Stannis Baratheon,
+33,Shireen Baratheon,Stannis Baratheon,31,Selyse Florent,32,,
+34,Renly Baratheon,Steffon Baratheon,29,Cassana Baratheon,30,Margaery Tyrell,108
+35,Robert Baratheon,Steffon Baratheon,29,Cassana Baratheon,30,Cersei Lannister,143
+36,Myrcella Baratheon,"Jaime Lannister, Robert Baratheon","142,35",Cersei Lannister,,,
+37,Joffrey Baratheon,"Jaime Lannister, Robert Baratheon","142,35",Cersei Lannister,,Margaery Tyrell,108
+38,Tommen Baratheon,"Jaime Lannister, Robert Baratheon","142,35",Cersei Lannister,,Margaery Tyrell,108
+39,Willem Frey,Cleos Frey,41,Jeyne Dary,,,
+40,Tywin Frey,Cleos Frey,41,Jeyne Dary,,,
+41,Cleos Frey,Walder Frey son of Emmon,43,Genna Lannister,,Jeyne Dary,
+42,Lyonel Frey,Emmon Frey,44,Genna Lannister,,Melesa Crakehall,
+43,Walder Frey son of Emmon,Emmon Frey,44,Genna Lannister,,,
+44,Emmon Frey,Walder Frey,46,Perra Royce,,Genna Lannister,140
+45,Tion Frey,Emmon Frey,44,Genna Lannister,,,
+46,Walder Frey,,,,,"Amarei Crackhall, Perra Royce, Bethany Rosby",
+47,Willamen Frey,Walder Frey,46,Bethany Rosby,,,
+48,Benfrey Frey,Walder Frey,46,Bethany Rosby,,Jyanna Frey,49
+49,Jyanna Frey,,,,,Benfrey Frey,48
+50,Olyvar Frey,Walder Frey,46,Bethany Rosby,,,
+51,Roslin Frey,Walder Frey,46,Bethany Rosby,,Edmure Tully,
+52,Perwyn Frey,Walder Frey,46,Bethany Rosby,,,
+53,Tysha,,,,,Tyrion Lannister,141
+54,Merret Frey,Walder Frey,46,Amarei Crackhall,,Mariya Darry,
+55,Walder Frey son of Merret,Merret Frey,54,Mariya Darry,,,
+56,Amerei Frey,Merret Frey,54,Mariya Darry,,Lancel Lannister,139
+57,Marissa Frey,Merret Frey,54,Mariya Darry,,,
+58,Walda Frey daugther of Merret,Merret Frey,54,Mariya Darry,,Roose Bolton,11
+59,Dorna Swyft,,,,,Kevan Lannister,137
+60,Princess of Dorne,,,,,,
+61,Dyanna Dayne,,,,,,
+62,Leonette Fossoway,,,,,Garlan Tyrell,
+63,Alerie Hightower,,,,,Mace Tyrell,105
+64,Allanys Harlaw,,,,,Balon Greyjoy,
+65,Gilliane Glover,,,,,,
+66,Lyanna Glover,,,,,,
+67,Robert Arryn,Jon Arryn,68,Lisa Arryn,,,
+68,Jon Arryn,Jasper Arryn,70,,,"Lisa Arryn, Rowena Arryn, Jeyne Royce","?, 69, ?"
+69,Rowena Arryn,,,,,Rowena Arryn,69
+70,Jasper Arryn,,,,,,
+71,Alis Arryn,Jasper Arryn,70,,,Elys Waynwood,
+72,Melantha Blackwood,,,,,Willam Stark,
+73,Quellon Greyjoy,,,,,"Lady of House Stonetree, Lady of House Sunderly, Lady of House Piper","74, 75, 76"
+74,Lady of House Stonetree,,,,,Quellon Greyjoy,73
+75,Lady of House Sunderly,,,,,Quellon Greyjoy,73
+76,Lady of House Piper,,,,,Quellon Greyjoy,73
+77,Victarion Greyjoy,Quellon Greyjoy,74,Lady of House Sunderly,75,,
+78,Urrigon Greyjoy,Quellon Greyjoy,74,Lady of House Sunderly,75,,
+79,Aeron Greyjoy,Quellon Greyjoy,74,Lady of House Sunderly,75,,
+80,Euron Greyjoy,Quellon Greyjoy,74,Lady of House Sunderly,75,,
+81,Balon Greyjoy,Quellon Greyjoy,74,Lady of House Sunderly,75,Alannys Harlaw,82
+82,Alannys Harlaw,,,,,Balon Greyjoy,81
+83,Theon Greyjoy,Balon Greyjoy,81,Alannys Harlaw,82,,
+84,Rodrik Greyjoy,Balon Greyjoy,81,Alannys Harlaw,82,,
+85,Maron Greyjoy,Balon Greyjoy,81,Alannys Harlaw,82,,
+86,Asha (Yara) Greyjoy,Balon Greyjoy,81,Alannys Harlaw,82,Erik Ironmaker,26
+87,Robin Greyjoy,Quellon Greyjoy,74,Lady of House Piper,77,,
+88,Harlon Greyjoy,Quellon Greyjoy,74,Lady of House Stonetree,74,,
+89,Quenton Greyjoy,Quellon Greyjoy,74,Lady of House Stonetree,74,,
+90,Donel Greyjoy,Quellon Greyjoy,74,Lady of House Stonetree,74,,
+91,Unknown father Tyrell,,,,,,
+92,Unknown mother Tyrell,,,,,,
+93,Moryn Tyrell,Unknown father Tyrell,91,Unknown mother Tyrell,92,,
+94,Luthor Tyrell,Unknown father Tyrell,91,Unknown mother Tyrell,92,Olenna Redwyne,22
+95,Luthor Tyrell son of Moryn,Moryn Tyrell,93,,,,
+96,Elyn Norridge,,,,,Luthor Tyrell son of Moryn,95
+97,Theodore Tyrell,Luthor Tyrell son of Moryn,95,Elyn Norridge,96,,
+98,Medwick Tyrell,Luthor Tyrell son of Moryn,95,Elyn Norridge,96,,
+99,Olene Tyrell,Luthor Tyrell son of Moryn,95,Elyn Norridge,96,Leo Blackbar,100
+100,Leo Blackbar,,,,,Olene Tyrell,99
+101,Lia Serry,,,,,Theodore Tyrell,97
+102,Elinor Tyrell,Theodore Tyrell,97,Lia Serry,101,,
+103,Luthor Tyrell son of Theodore,Theodore Tyrell,97,Lia Serry,101,,
+104,Mina Tyrell,Luthor Tyrell,94,Olenna Redwyne,22,Paxter Redwyne,24
+105,Mace Tyrell,Luthor Tyrell,94,Olenna Redwyne,22,Alerie Hightower,63
+106,Loras Tyrell,Mace Tyrell,105,Alerie Hightower,63,,
+107,Garlan Tyrell,Mace Tyrell,105,Alerie Hightower,63,Leonette Fossoway,62
+108,Margaery Tyrell,Mace Tyrell,105,Alerie Hightower,63,"Renly Baratheon, Joffrey Baratheon, Tommen Baratheon","34, 37, 38"
+109,Tybolt Lannister,Damon Lannister,110,Cerissa Brax,9,Teora Kyndall,113
+110,Damon Lannister,,,,,Cerissa Brax,9
+111,Gerold Lannister,Damon Lannister,110,Cerissa Brax,9,"Alysanne Farman, Rohanne Webber","10, 112"
+112,Rohanne Webber,,,,,Gerold Lannister,111
+113,Teora Kyndall,,,,,Tybolt Lannister,109
+114,Jason Lannister,Gerold Lannister,111,Rohanne Webber,112,"Alys Stackspear, Marla Prester","115, 116"
+115,Alys Stackspear, ,,,,Jason Lannister,114
+116,Marla Prester,,,,,Jason Lannister,114
+117,Damon Lannister son of Jason,Jason Lannister,114,Alys Stackspear,115,Ella Lannister,118
+118,Ella Lannister,,,,,Damon Lannister son of Jason,117
+119,Damion Lannister,Damon Lannister son of Jason,117,Ella Lannister,118,Shiera Crakehall,120
+120,Shiera Crakehall,,,,,Damion Lannister,119
+121,Lucion Lannister,Damion Lannister,119,Shiera Crakehall,120,,
+122,Lanna Lannister,Damion Lannister,119,Shiera Crakehall,120,Antario Jast,123
+123,Antario Jast,,,,,Lanna Lannister,122
+124,Stafford Lannister,Jason Lannister,114,Marla Prester,116,Myranda Lefford,20
+125,Myrielle Lannister,Stafford Lannister,124,Myranda Lefford,20,,
+126,Daven Lannister,Stafford Lannister,124,Myranda Lefford,20,,
+127,Cerenna Lannister,Stafford Lannister,124,Myranda Lefford,20,,
+128,Joanna Lannister,Jason Lannister,114,Marla Prester,116,Tywin Lannister,129
+129,Tywin Lannister,Tytos Lannister,130,Jeyne Marbrand,131,Joanna Lannister,128
+130,Tytos Lannister,,,,,Jeyne Marbrand,131
+131,Jeyne Marbrand,,,,,Tytos Lannister,130
+132,Gerion Lannister,Tytos Lannister,130,Jeyne Marbrand,131,,
+133,Tygett Lannister,Tytos Lannister,130,Jeyne Marbrand,131,Darlessa Marbrand,134
+134,Darlessa Marbrand,,,,,Tygett Lannister,133
+135,Tyrek Lannister,Tygett Lannister,133,Darlessa Marbrand,134,Ermesande Hayford,136
+136,Ermesande Hayford,,,,,Tyrek Lannister,135
+137,Kevan Lannister,Tytos Lannister,130,Jeyne Marbrand,131,Dorna Swyft,59
+138,Willem Lannister,Kevan Lannister,137,Dorna Swyft,59,,
+139,Lancel Lannister,Kevan Lannister,137,Dorna Swyft,59,Amerei Frey,56
+140,Genna Lannister,Tytos Lannister,130,Jeyne Marbrand,131,Emmon Frey,44
+141,Tyrion Lannister,Tywin Lannister,129,Joanna Lannister,128,"Tysha, Sansa Stark",53
+142,Jaime Lannister,Tywin Lannister,129,Joanna Lannister,128,,
+143,Cersei Lannister,Tywin Lannister,129,Joanna Lannister,128,Robert Baratheon,35
