@@ -1,4 +1,3 @@
-Id,Name,Father_Name,Father_Id,Mother_Name,Mother_Id,Spouses_Names,Spouses_Ids
 2,Lysara Karstark,N/A,N/A,N/A,N/A,Artos Stark,153
 3,Lorra Royce,N/A,N/A,N/A,N/A,Beron Stark,152
 4,Alys Karstark,Rickard Karstark,157,N/A,N/A,Brandon Stark,160
@@ -26,7 +25,7 @@ Id,Name,Father_Name,Father_Id,Mother_Name,Mother_Id,Spouses_Names,Spouses_Ids
 26,Erik Ironmaker,N/A,N/A,N/A,N/A,N/A,N/A
 28,Ormund Baratheon,N/A,N/A,N/A,N/A,Rhaelle Targaryen,199
 29,Steffon Baratheon,Ormund Baratheon,28,Rhaelle Targaryen,199,Cassana Baratheon,30
-30,Cassana Baratheon,,N/A,N/A,N/A,Steffon Baratheon,29
+30,Cassana Baratheon,N/A,N/A,N/A,N/A,Steffon Baratheon,29
 31,Stannis Baratheon,Steffon Baratheon,29,Cassana Baratheon,30,Selyse Florent,32
 32,Selyse Florent,N/A,N/A,N/A,N/A,Stannis Baratheon,31
 33,Shireen Baratheon,Stannis Baratheon,31,Selyse Florent,32,N/A,N/A
