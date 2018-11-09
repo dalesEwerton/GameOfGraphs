@@ -26,7 +26,7 @@ public class Player {
 	
 	@Override
 	public String toString() {
-		return this.name + "- filho de " + this.fatherName + " e " + this.motherName
+		return this.name + "- pai: " + this.fatherName + " mae: " + this.motherName
 				+ "- casado com " + this.spouses;
 	}
 

@@ -74,9 +74,13 @@ public class Actions extends JFrame {
 				} catch(Exception e) {
 					System.out.println(e.getMessage());
 				}
-			} else if (!c.getFatherName().equals("N/A")) {
+			}
+			
+			if (!c.getFatherName().equals("N/A")) {
 				try {
-					this.gotGraph.addEdge(c.getName(), c.getFatherName());
+					this.gotGraph.addEdge(c.getFatherName(), c.getName());
+					this.edgeSrc.add(c.getFatherName());
+					this.edgeFont.add(c.getName());
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}

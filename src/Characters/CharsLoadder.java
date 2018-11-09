@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class CharsLoadder {
 	
-	private Player chrs[] = new Player[208];
+	private Player chrs[] = new Player[211];
 	private int indexControl = 0;
 	
 
