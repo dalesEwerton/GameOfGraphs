@@ -20,7 +20,7 @@
 21,Minisa Whent,N/A,N/A,N/A,N/A,Hoster Tully,14
 22,Olenna Redwyne,Runceford,200,N/A,N/A,Luthor Tyrell,94
 23,Horas Redwyne,Paxter Redwyne,24,Mina Tyrell,104,N/A,N/A
-24,Paxter Redwyne,N/A,N/A,N/A,N/A, Mina Tyrell,104
+24,Paxter Redwyne,N/A,N/A,N/A,N/A,Mina Tyrell,104
 25,Hobber Redwyne,Paxter Redwyne,24,Mina Tyrell,104,N/A,N/A
 26,Erik Ironmaker,N/A,N/A,N/A,N/A,N/A,N/A
 28,Ormund Baratheon,N/A,N/A,N/A,N/A,Rhaelle Targaryen,199
@@ -159,7 +159,7 @@
 161,Brandon Stark Burner,Brandon Stark,160,N/A,N/A,N/A,N/A
 162,Lyanna Stark,Rickard Stark,157,Lyarra Stark,158,N/A,N/A
 163,Eddard Stark,Rickard Stark,157,Lyarra Stark,158,Catelyn Stark,13
-164,Jon Snow,Eddard Stark-Rhaegar Targaryen,163-187,Lyanna Stark-Rhaegar Targaryen,162,N/A,N/A
+164,Jon Snow,Rhaegar Targaryen,163-187,Lyanna Stark,162,N/A,N/A
 165,Arya Stark,Eddard Stark,163,Catelyn Stark,13,N/A,N/A
 166,Rickon Stark,Eddard Stark,163,Catelyn Stark,13,N/A,N/A
 167,Sansa Stark,Eddard Stark,163,Catelyn Stark,13,Tyrion Lannister-Ramsay Bolton,141-12

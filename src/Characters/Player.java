@@ -8,11 +8,11 @@ public class Player {
 	String fatherId;
 	String motherName;
 	String motherId;
-	String spouses;
+	String spouses[];
 	String spousesIds;
 	
 	public Player(String id, String name, String fatherName, String fatherId, String motherName, String motherId,
-			String spouses, String spousesIds) {
+			String spouses[], String spousesIds) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -78,11 +78,11 @@ public class Player {
 		this.motherId = motherId;
 	}
 
-	public String getSpouses() {
+	public String[] getSpouses() {
 		return spouses;
 	}
 
-	public void setSpouses(String spouses) {
+	public void setSpouses(String spouses[]) {
 		this.spouses = spouses;
 	}
 

@@ -12,13 +12,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		new Main();
-		/*CharsLoadder chrs = new CharsLoadder();
-		chrs.loadChars();
-		Character cs[] = chrs.getChars();
-		
-		for (Character c : cs) {
-			System.out.println(c.toString());
-		}*/
 	}
 
 }

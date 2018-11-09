@@ -55,7 +55,7 @@ public class CharsLoadder {
 		String fatherId = itens[3];
 		String motherName = itens[4];
 		String motherId = itens[5];
-		String spouses = itens[6];
+		String spouses[] = itens[6].split("-");
 		String spousesIds = itens[7];
 		
 		Player ch = new Player(id, name, fatherName, fatherId, motherName, motherId, spouses, spousesIds);

@@ -25,8 +25,8 @@ public class Actions extends JFrame {
 	private HashMap<String, Object> gotMap;
 	private ArrayList<String> edgeSrc;
 	private ArrayList<String> edgeFont;
-	private int cordX = 30;
-	private int cordY = 30;
+	private int cordX = 40;
+	private int cordY = 40;
 	
 	public Actions() {
 		super("Game of Graphs - JGraph");
@@ -85,6 +85,22 @@ public class Actions extends JFrame {
 					System.out.println(e.getMessage());
 				}
 			}
+			
+			for (String spouse : c.getSpouses() ) {
+				if (!spouse.equals("N/A")) {
+					try {
+						this.gotGraph.addEdge(spouse, c.getName());
+						this.edgeSrc.add(spouse);
+						this.edgeFont.add(c.getName());
+						
+						this.gotGraph.addEdge(c.getName(), spouse);
+						this.edgeSrc.add(c.getName());
+						this.edgeFont.add(spouse);
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+					}
+				}
+			}
 		}
 	}
 	
@@ -94,7 +110,7 @@ public class Actions extends JFrame {
 		
 		for (String p : plays) {
 			Object v = this.graph.insertVertex(parent, null, p,
-					this.cordX, this.cordY, 20, 20);
+					this.cordX, this.cordY, 30, 30);
 			this.graphMap.put(p, v);
 			this.updateCords();
 		}
@@ -114,7 +130,7 @@ public class Actions extends JFrame {
 		if (this.cordX < 1000 ) {
 			this.cordX += 100;
 		} else {
-			this.cordX = 30;
+			this.cordX = 40;
 			this.cordY +=  100;
 		}
 	}
