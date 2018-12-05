@@ -1,16 +1,28 @@
 package Graph;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
+import org.jgrapht.Graph;
+import org.jgrapht.ext.JGraphXAdapter;
+import org.jgrapht.graph.AsSubgraph;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.DepthFirstIterator;
 
+import com.mxgraph.layout.mxCircleLayout;
+import com.mxgraph.layout.mxIGraphLayout;
 import com.mxgraph.swing.mxGraphComponent;
+import com.mxgraph.util.mxCellRenderer;
 import com.mxgraph.view.mxGraph;
 
 import Characters.CharsLoadder;
@@ -138,13 +150,36 @@ public class Actions extends JFrame {
 	}
 	
 	private void deepFirstIterator(String startVertex) {
-		DepthFirstIterator depthFirstIterator 
+		DepthFirstIterator<String, DefaultEdge> depthFirstIterator 
 		  = new DepthFirstIterator<>(this.gotGraph, startVertex);
 		
+		Set<String> subGraph = new HashSet<>();
 		while(depthFirstIterator.hasNext()) {
-			System.out.println(depthFirstIterator.next());
+			subGraph.add(depthFirstIterator.next());
 		}
-
+		
+		AsSubgraph<String, DefaultEdge> sub = new AsSubgraph<>(gotGraph, subGraph);
+		System.out.println();
+		createGraphImage(sub);
+	}
+	
+	private void createGraphImage(Graph g) {
+	    
+		JGraphXAdapter<String, DefaultEdge> graphAdapter = 
+			      new JGraphXAdapter<String, DefaultEdge>(g);
+			    mxIGraphLayout layout = new mxCircleLayout(graphAdapter);
+			    layout.execute(graphAdapter.getDefaultParent());
+			   
+			    BufferedImage image = 
+			      mxCellRenderer.createBufferedImage(graphAdapter, null, 2, Color.WHITE,graphComponent.isAntiAlias(), null, graphComponent.getCanvas());
+			    File imgFile = new File("output/graph.png");
+			    try {
+					ImageIO.write(image, "PNG", imgFile);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
 	}
 
 }
