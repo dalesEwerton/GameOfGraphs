@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.DirectedAcyclicGraph;
+import org.jgrapht.traverse.DepthFirstIterator;
 
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
@@ -53,6 +53,8 @@ public class Actions extends JFrame {
 		this.loadGraficGraph();
 		
 		graph.getModel().endUpdate();
+		
+		this.deepFirstIterator("Aegon V Targaryen");
 	}
 	
 	private void loadGraphObject(){
@@ -133,6 +135,16 @@ public class Actions extends JFrame {
 			this.cordX = 40;
 			this.cordY +=  100;
 		}
+	}
+	
+	private void deepFirstIterator(String startVertex) {
+		DepthFirstIterator depthFirstIterator 
+		  = new DepthFirstIterator<>(this.gotGraph, startVertex);
+		
+		while(depthFirstIterator.hasNext()) {
+			System.out.println(depthFirstIterator.next());
+		}
+
 	}
 
 }
