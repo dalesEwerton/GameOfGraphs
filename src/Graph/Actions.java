@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import javax.imageio.ImageIO;
@@ -16,7 +17,10 @@ import org.jgrapht.ext.JGraphXAdapter;
 import org.jgrapht.graph.AsSubgraph;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.DefaultUndirectedGraph;
 import org.jgrapht.traverse.DepthFirstIterator;
+
+import org.jgrapht.alg.scoring.PageRank;
 
 import com.mxgraph.layout.mxCircleLayout;
 import com.mxgraph.layout.mxCompactTreeLayout;
@@ -157,6 +161,11 @@ public class Actions extends JFrame {
 					e.printStackTrace();
 				}
 			 
+	}
+	
+	public Double clusterPlayerScore(String player) {
+		PageRank<String, DefaultEdge> pg = new PageRank<>(this.gotGraph);
+		return pg.getVertexScore(player);
 	}
 	
 	private void loadGraficGraph() {
