@@ -66,8 +66,6 @@ public class Actions extends JFrame {
 		//graph.getModel().beginUpdate();
 		//this.loadGraficGraph();
 		//graph.getModel().endUpdate();
-		
-		this.getAVertexSubgraph("Aegon V Targaryen", "teste");
 	}
 	
 	private void loadGraphObject(){
@@ -119,7 +117,7 @@ public class Actions extends JFrame {
 		}
 	}
 	
-	public void getAVertexSubgraph(String startVertex, String title) {
+	public AsSubgraph<String, DefaultEdge> getAVertexSubgraph(String startVertex, String title) {
 		DepthFirstIterator<String, DefaultEdge> depthFirstIterator 
 		  = new DepthFirstIterator<>(this.gotGraph, startVertex);
 		
@@ -129,8 +127,7 @@ public class Actions extends JFrame {
 		}
 		
 		AsSubgraph<String, DefaultEdge> sub = new AsSubgraph<>(gotGraph, subGraph);
-		System.out.println();
-		createGraphImage(sub, title +  " - " + startVertex);
+		return sub;
 	}
 	
 	

@@ -1,16 +1,24 @@
 package Questions;
 
+import org.jgrapht.Graph;
+
 import Graph.Actions;
 import Graph.Main;
 
 public class Q1 {
 	
-	public void Main() {
-		Actions a = new Actions();
-	}
 	
 	public static void main(String[] args) {
-		new Main();
+		Actions a = new Actions();
+		Graph gotGraph = a.getGotGraph();
+		
+	}
+	
+	private void common(Graph graph) {
+		
+		int graphSize = graph.vertexSet().size();
+		
+		
 	}
 
 }
