@@ -67,7 +67,7 @@ public class Actions extends JFrame {
 		//this.loadGraficGraph();
 		//graph.getModel().endUpdate();
 		
-		this.getAVertexSubgraph("Aegon V Targaryen");
+		this.getAVertexSubgraph("Aegon V Targaryen", "teste");
 	}
 	
 	private void loadGraphObject(){
@@ -119,7 +119,7 @@ public class Actions extends JFrame {
 		}
 	}
 	
-	public void getAVertexSubgraph(String startVertex) {
+	public void getAVertexSubgraph(String startVertex, String title) {
 		DepthFirstIterator<String, DefaultEdge> depthFirstIterator 
 		  = new DepthFirstIterator<>(this.gotGraph, startVertex);
 		
@@ -130,7 +130,7 @@ public class Actions extends JFrame {
 		
 		AsSubgraph<String, DefaultEdge> sub = new AsSubgraph<>(gotGraph, subGraph);
 		System.out.println();
-		createGraphImage(sub);
+		createGraphImage(sub, title +  " - " + startVertex);
 	}
 	
 	
@@ -138,7 +138,7 @@ public class Actions extends JFrame {
 		return this.gotGraph;
 	}
 	
-	public void createGraphImage(Graph g) {
+	public void createGraphImage(Graph g, String name) {
 	    
 		JGraphXAdapter<String, DefaultEdge> graphAdapter = 
 			      new JGraphXAdapter<String, DefaultEdge>(g);
@@ -147,7 +147,7 @@ public class Actions extends JFrame {
 			   
 			    BufferedImage image = 
 			      mxCellRenderer.createBufferedImage(graphAdapter, null, 2, Color.WHITE, graphComponent.isAntiAlias(), null, graphComponent.getCanvas());
-			    File imgFile = new File("output/graph.png");
+			    File imgFile = new File("output/" + name + ".png");
 			    try {
 					ImageIO.write(image, "PNG", imgFile);
 				} catch (IOException e) {
