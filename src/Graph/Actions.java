@@ -1,6 +1,5 @@
 package Graph;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +18,7 @@ import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.DepthFirstIterator;
 
-import com.mxgraph.layout.mxCircleLayout;
+import com.mxgraph.layout.mxCompactTreeLayout;
 import com.mxgraph.layout.mxIGraphLayout;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.util.mxCellRenderer;
@@ -42,10 +41,10 @@ public class Actions extends JFrame {
 	
 	public Actions() {
 		super("Game of Graphs - JGraph");
-		initGUI();
+		initGraph();
 	}
 	
-	private void initGUI() {
+	private void initGraph() {
 		setSize(1280,768);
 		setLocationRelativeTo(null);
 		graph    = new mxGraph();
@@ -55,18 +54,20 @@ public class Actions extends JFrame {
 		edgeSrc  = new ArrayList<>();
 		edgeFont = new ArrayList<>();
 		graphComponent = new mxGraphComponent(this.graph);
-		graphComponent.setPreferredSize(new Dimension(1280, 768));
-		getContentPane().add(graphComponent);
 		
 		Object parent = graph.getDefaultParent();
-		graph.getModel().beginUpdate();
-		 
 		this.loadGraphObject();
-		this.loadGraficGraph();
 		
-		graph.getModel().endUpdate();
 		
-		this.deepFirstIterator("Aegon V Targaryen");
+		//Uncoment to load a complet grafic graph
+		
+		//graphComponent.setPreferredSize(new Dimension(1280, 768));
+		//getContentPane().add(graphComponent);
+		//graph.getModel().beginUpdate();
+		//this.loadGraficGraph();
+		//graph.getModel().endUpdate();
+		
+		this.getAVertexSubgraph("Aegon V Targaryen");
 	}
 	
 	private void loadGraphObject(){
@@ -118,6 +119,44 @@ public class Actions extends JFrame {
 		}
 	}
 	
+	public void getAVertexSubgraph(String startVertex) {
+		DepthFirstIterator<String, DefaultEdge> depthFirstIterator 
+		  = new DepthFirstIterator<>(this.gotGraph, startVertex);
+		
+		Set<String> subGraph = new HashSet<>();
+		while(depthFirstIterator.hasNext()) {
+			subGraph.add(depthFirstIterator.next());
+		}
+		
+		AsSubgraph<String, DefaultEdge> sub = new AsSubgraph<>(gotGraph, subGraph);
+		System.out.println();
+		createGraphImage(sub);
+	}
+	
+	
+	public DefaultDirectedGraph<String, DefaultEdge> getGotGraph() {
+		return this.gotGraph;
+	}
+	
+	public void createGraphImage(Graph g) {
+	    
+		JGraphXAdapter<String, DefaultEdge> graphAdapter = 
+			      new JGraphXAdapter<String, DefaultEdge>(g);
+			    mxIGraphLayout layout = new mxCompactTreeLayout(graphAdapter, false);
+			    layout.execute(graphAdapter.getDefaultParent());
+			   
+			    BufferedImage image = 
+			      mxCellRenderer.createBufferedImage(graphAdapter, null, 2, Color.WHITE, graphComponent.isAntiAlias(), null, graphComponent.getCanvas());
+			    File imgFile = new File("output/graph.png");
+			    try {
+					ImageIO.write(image, "PNG", imgFile);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+	}
+	
 	private void loadGraficGraph() {
 		Set<String> plays = this.gotMap.keySet();
 		Object parent     = this.graph.getDefaultParent();
@@ -147,39 +186,6 @@ public class Actions extends JFrame {
 			this.cordX = 40;
 			this.cordY +=  100;
 		}
-	}
-	
-	private void deepFirstIterator(String startVertex) {
-		DepthFirstIterator<String, DefaultEdge> depthFirstIterator 
-		  = new DepthFirstIterator<>(this.gotGraph, startVertex);
-		
-		Set<String> subGraph = new HashSet<>();
-		while(depthFirstIterator.hasNext()) {
-			subGraph.add(depthFirstIterator.next());
-		}
-		
-		AsSubgraph<String, DefaultEdge> sub = new AsSubgraph<>(gotGraph, subGraph);
-		System.out.println();
-		createGraphImage(sub);
-	}
-	
-	private void createGraphImage(Graph g) {
-	    
-		JGraphXAdapter<String, DefaultEdge> graphAdapter = 
-			      new JGraphXAdapter<String, DefaultEdge>(g);
-			    mxIGraphLayout layout = new mxCircleLayout(graphAdapter);
-			    layout.execute(graphAdapter.getDefaultParent());
-			   
-			    BufferedImage image = 
-			      mxCellRenderer.createBufferedImage(graphAdapter, null, 2, Color.WHITE,graphComponent.isAntiAlias(), null, graphComponent.getCanvas());
-			    File imgFile = new File("output/graph.png");
-			    try {
-					ImageIO.write(image, "PNG", imgFile);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			 
 	}
 
 }
