@@ -33,9 +33,9 @@ public class Q3 {
 		}
 		
 		for( int i = 0 ; i < biggestPlayersGraphs.size(); i++) {
-			String title = "Questao 3 - Panelinha " + (i+1) + " - Lider: " + biggestPlayersNames.get(i);
+			String title = "Questao 3 - Panelinha " + (i+1);
 			a.createGraphImage(biggestPlayersGraphs.get(i), title);
-			System.out.println(title);
+			System.out.println(title + " - Lider: " + biggestPlayersNames.get(i).toString());
 			System.out.println(biggestPlayersGraphs.get(i).toString());
 		}
 	}
