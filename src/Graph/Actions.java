@@ -18,6 +18,7 @@ import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.DepthFirstIterator;
 
+import com.mxgraph.layout.mxCircleLayout;
 import com.mxgraph.layout.mxCompactTreeLayout;
 import com.mxgraph.layout.mxIGraphLayout;
 import com.mxgraph.swing.mxGraphComponent;
@@ -143,11 +144,11 @@ public class Actions extends JFrame {
 	    
 		JGraphXAdapter<String, DefaultEdge> graphAdapter = 
 			      new JGraphXAdapter<String, DefaultEdge>(g);
-			    mxIGraphLayout layout = new mxCompactTreeLayout(graphAdapter, false);
+			    mxIGraphLayout layout = new mxCircleLayout(graphAdapter);
 			    layout.execute(graphAdapter.getDefaultParent());
 			   
 			    BufferedImage image = 
-			      mxCellRenderer.createBufferedImage(graphAdapter, null, 2, Color.WHITE, graphComponent.isAntiAlias(), null, graphComponent.getCanvas());
+			      mxCellRenderer.createBufferedImage(graphAdapter, null, 1, Color.WHITE, graphComponent.isAntiAlias(), null, graphComponent.getCanvas());
 			    File imgFile = new File("output/" + name + ".png");
 			    try {
 					ImageIO.write(image, "PNG", imgFile);
