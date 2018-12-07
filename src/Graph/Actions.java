@@ -130,6 +130,10 @@ public class Actions extends JFrame {
 		return sub;
 	}
 	
+	public HashMap<String, Object> getGotVertex() {
+		return this.gotMap;
+	}
+	
 	
 	public DefaultDirectedGraph<String, DefaultEdge> getGotGraph() {
 		return this.gotGraph;
